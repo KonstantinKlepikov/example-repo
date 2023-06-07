@@ -22,7 +22,7 @@ print(" ")
 # Выведите на экран следующее стихотворение, используя старый стиль форматирования
 # Подставьте в него такие строки: 'roast beef', 'ham', 'head' и 'clam':
 kitty1 = 'My kitty cat likes'
-kitty2 =  'My kitty cat fell on his'
+kitty2 = 'My kitty cat fell on his'
 kitty3 = 'And now thinks he is a'
 thing1 = 'roast beef'
 thing2 = 'ham'
@@ -34,6 +34,12 @@ print(kitty2, '%s' %thing3)
 print(kitty3, '%s.112' %thing4)
 print(" ")
 # Напишите письмо с использованием нового стиля форматирования. 
+sometext = """Thank you for your letter. We are sorry that our {product}
+{verbed} in your {room}. Please note that it should never
+be used in a {room}, especially near any {animals}.
+Send us your receipt and {amount} for shipping and handling.
+We will send you another {product} that, in our tests,
+is {percent}% less likely to have {verbed}."""
 # Сохраните предложенную строку в переменной letter 
 # (она понадобится вам в упражнении ниже):
 
@@ -47,3 +53,18 @@ print(" ")
 #Sincerely,
 #{spokesman}
 #{job_title}
+this = 'sometext'
+print("""some text {1} {1} """.format('this', 'that'))
+print(f'some text {this = } ') 
+
+# bigtext = f"""Thank you for your letter. We are sorry that our {product}
+# {verbed} in your {room}. Please note that it should never
+# be used in a {room}, especially near any {animals}.
+# Send us your receipt and {amount} for shipping and handling.
+# We will send you another {product} that, in our tests,
+# is {percent}% less likely to have {verbed}.
+# Thank you for your support.
+# Sincerely,
+# {spokesman}
+# {job_title}
+# """ 

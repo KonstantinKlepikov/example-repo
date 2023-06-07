@@ -4,6 +4,8 @@ print(" ")
 furry = True
 large = True
 if furry:
+    large = True
+if furry:
     if large:
        print("It's a yeti.")
     else:
@@ -18,13 +20,13 @@ print(" ")
 
 color = "mauve"
 if color == "red":
-        print("It's a tomato")
+ print("It's a tomato")
 elif color == "green":
-        print("It's a green pepper")
+ print("It's a green pepper")
 elif color == "bee purple":
-        print("I don't know what it is, but only bees can see it")
+ print("I don't know what it is, but only bees can see it")
 else:
-        print("I've never heard of the color", color) 
+ print("I've never heard of the color", color) 
 
 print(" ")
 
@@ -37,9 +39,9 @@ print(" ")
 
 letter = 'o'
 if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u': 
-    print(letter, 'is a vowel')
+ print(letter, 'is a vowel')
 else:
-    print(letter,'is not a vowel')
+ print(letter,'is not a vowel')
 
 print(" ")
 vowels = 'aeiou'
@@ -47,7 +49,7 @@ letter = 'o'
 print(bool(letter in vowels))
 print(" ")
 if letter in vowels:
-     print(letter, 'is a vowel')
+ print(letter, 'is a vowel')
 print(" ")
 letter = 'o'
 vowel_set = {'a', 'e', 'i', 'o', 'u'}
@@ -66,18 +68,18 @@ tweet_limit = 280
 tweet_string = "Blah" * 50
 diff = tweet_limit - len(tweet_string)
 if diff >= 0:
-     print("A fitting tweet")
+ print("A fitting tweet")
 else:
-     print("Went over by", abs(diff))
+ print("Went over by", abs(diff))
 
 print(" ")
 
 tweet_limit = 280
 tweet_string = "Blah" * 50
 if diff := tweet_limit - len(tweet_string) >= 0: # := оператор присваивания
-     print("A fitting tweet")
+ print("A fitting tweet")
 else:
-     print("Went over by", abs(diff))
+ print("Went over by", abs(diff))
 
 print(" ")
 print("Создаем строки с помощью кавычек")
