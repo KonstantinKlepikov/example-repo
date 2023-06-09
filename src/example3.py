@@ -7,26 +7,26 @@ if furry:
     large = True
 if furry:
     if large:
-       print("It's a yeti.")
+        print("It's a yeti.")
     else:
-       print("It's a cat!")
+        print("It's a cat!")
 else:
     if large:
-      print("It's a whale!")
+        print("It's a whale!")
     else:
-      print("It's a human. Or a hairless cat.")
+        print("It's a human. Or a hairless cat.")
  
 print(" ")
 
 color = "mauve"
 if color == "red":
- print("It's a tomato")
+    print("It's a tomato")
 elif color == "green":
- print("It's a green pepper")
+    print("It's a green pepper")
 elif color == "bee purple":
- print("I don't know what it is, but only bees can see it")
+    print("I don't know what it is, but only bees can see it")
 else:
- print("I've never heard of the color", color) 
+    print("I've never heard of the color", color) 
 
 print(" ")
 

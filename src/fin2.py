@@ -42,7 +42,6 @@ We will send you another {product} that, in our tests,
 is {percent}% less likely to have {verbed}."""
 # Сохраните предложенную строку в переменной letter 
 # (она понадобится вам в упражнении ниже):
-
 #Thank you for your letter. We are sorry that our {product}
 #{verbed} in your {room}. Please note that it should never
 #be used in a {room}, especially near any {animals}.
@@ -54,17 +53,60 @@ is {percent}% less likely to have {verbed}."""
 #{spokesman}
 #{job_title}
 this = 'sometext'
-print("""some text {1} {1} """.format('this', 'that'))
-print(f'some text {this = } ') 
+print("""some text {1} {0} {2} """.format('this', 'that', 'those'))
+print(f'{this = } ') 
+print(" ")
 
-# bigtext = f"""Thank you for your letter. We are sorry that our {product}
-# {verbed} in your {room}. Please note that it should never
-# be used in a {room}, especially near any {animals}.
-# Send us your receipt and {amount} for shipping and handling.
-# We will send you another {product} that, in our tests,
-# is {percent}% less likely to have {verbed}.
-# Thank you for your support.
-# Sincerely,
-# {spokesman}
-# {job_title}
-# """ 
+# Присвойте значения переменным 'salutation', 'name', 'product', 'verbed'
+# (глагол в прошедшем времени), 'room' , 'animals' , 'percent' , 'spokesman'
+# и 'job_title'. С помощью функции letter.format() выведите на экран значение
+# переменной letter, в которую подставлены эти значения.
+product = "product"
+verbed = "verbed"
+room = "room"
+animals = "animals"
+amount = "amount"
+percent = "percent"
+print("Изначальный текст:")
+print(f"""Thank you for your letter. We are sorry that our {product}
+{verbed} in your {room}. Please note that it should never
+be used in a {room}, especially near any {animals}.
+Send us your receipt and {amount} for shipping and handling.
+We will send you another {product} that, in our tests,
+is {percent}% less likely to have {verbed}.""")
+print(" ")
+
+product = "chicken"
+verbed = "verbed"
+room = "box"
+animals = "wolfes"
+amount = "amount"
+percent = "percent"
+letter = """Thank you for your letter. We are sorry that our {product}
+{verbed} in your {room}. Please note that it should never
+be used in a {room}, especially near any {animals}.
+Send us your receipt and {amount} for shipping and handling.
+We will send you another {product} that, in our tests,
+is {percent}% less likely to have {verbed}."""
+letter2 = """Thank you for your letter. We are sorry that our {}
+{} in your {}. Please note that it should never
+be used in a {}, especially near any {}.
+Send us your receipt and {} for shipping and handling.
+We will send you another {} that, in our tests,
+is {}% less likely to have {}."""
+print("Измененный текст:")
+print(letter2.format(product, verbed, room, room, animals, amount, product, percent, verbed))
+print(" ")
+
+# Форматирование строк %
+duck = 'Boaty McBoatface'
+pumpkin = 'Horsey McHorseface'
+spitz = 'Trainy McTrainface'
+print("And the winner in the tournament is %s" %pumpkin)
+print(" ")
+
+# Форматирование с функцией format()
+print("And the winner in the tournament is {} or {} ".format(duck, spitz))
+print(" ")
+# Самый новый стиль: f-строки
+print(f'among the three candidates {duck}, {pumpkin}, {spitz} in the competition for the best name wins: {spitz}')
