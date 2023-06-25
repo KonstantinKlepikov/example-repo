@@ -55,34 +55,35 @@ print(" ")
 # range(10), чтобы получить ключи. В качестве значений используйте возведен-
 # ное в квадрат значение каждого ключа.
 squares = {}
-for i in range(10):
-    squares[i] = i**2
-    print(squares[i])
+squares = {k: k**2 for k in range(10)}
+print(squares)
 print(" ")
-# Используйте генератор множества, чтобы создать множество odd из нечетных
-print("Введите число:")
-number = int(input())
-even = 0
-odd = 0
-digits = "02468"
-for i in number:
-    if i in digits:
-        even += 1
-    else:
-        odd += 1
-
-print("Even: %d, odd: %d" % (even, odd))  #Не понимаю почему выдает ошибку. Цикл вроде правильно составил.
 
 # Используйте включение генератора, чтобы вернуть строку 'Got ' и числа из
 # диапазона range(10). Итерируйте по этой конструкции с помощью цикла for.
+for thing in ('Got %s' % number for number in range(10)):
+    print(thing)
+print(" ")
 
-
-# Используйте функцию zip() , чтобы создать словарь из кортежа ключей
+# Используйте   функцию zip() , чтобы создать словарь из кортежа ключей
 # ('optimist', 'pessimist', 'troll') и кортежа значений ('The glass is half full',
 # 'The glass is half empty', 'How did you get a glass?').
-
+keys = ('optimist','pessimist','troll')
+values = ('The glass is half full',
+   'The glass is half empty',
+    'How did you get a glass?')
+print(dict(zip(keys,values)))
+print(" ")
 
 # Используйте функцию zip(), чтобы создать словарь с именем movies, в котором
 # объединены списки titles = ['Creature of Habit', 'Crewel Fate', 'Sharks On
 # a Plane'] и plots = ['A nun turns into a monster', 'A haunted yarn shop', 'Check
 # your exits'].
+titles = ['Creature of Habbit',
+    'Crewel Fate',
+    'Sharks On a Plane']
+plots = ['A nun turns into a monster',
+    'A haunted yarn shop',
+    'Check your exits']
+movies = dict(zip(titles,plots))
+print(movies)
