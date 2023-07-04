@@ -429,9 +429,12 @@ class Thing:
 print(Thing)
 example = Thing()
 print(example)
+print(Thing is Thing())
+print(Thing == Thing())
+print("Выведенные значения не совпадают")
 print(" ")
 
-# Создайте новый класс с именем Thing2 и присвойте переменной letters зна-
+# Создайте новый класс с именем Thing2 и присвойте атрибуту класса letters зна-
 # чение 'abc'. Выведите на экран значение letters.
 class Thing2:
     letters = 'abc'
@@ -443,25 +446,27 @@ print(" ")
 # чение атрибута letters. Понадобилось ли вам создавать объект класса, чтобы
 # сделать это?
 class Thing3():
-    def __init___(self):
+    def __init__(self):
         self.letters = 'xyz'
-something = Thing3
-#print(something.letters) #AttributeError: type object 'Thing3' has no attribute 'letters'
+this = Thing3()
+print(this.letters)
 print(" ")
 
 # Создайте класс Element, имеющий атрибуты объекта name, symbol и number.
 # Создайте объект этого класса со значениями 'Hydrogen', 'H' и 1.
 class Element:
-    def __init___(self, name, symbol, number):
+    def __init__(self, name, symbol, number):
         self.name = name
         self.symbol = symbol
         self.number = number
-#hydrogen = Element('Hydrogen', 'H', 1) #TypeError: Element() takes no arguments
+hydrogen = Element('Hydrogen', 'H', 1) 
+print(hydrogen)
+print(" ")
 
 #Создайте словарь со следующими ключами и значениями: 'name': 'Hydrogen',
 #'symbol': 'H', 'number': 1. Далее создайте объект с именем hydrogen класса
 #Element с помощью этого словаря.
 
 e1_dict = {'name':'Hydrogen', 'symbol':'H', 'number':1}
-hydrogen = Element(e1_dict['name'], e1_dict['symbol'], e1_dict['number'])
-hydrogen.name
+hydrogen = Element(e1_dict['name'], e1_dict['symbol'], e1_dict['number']) 
+print(hydrogen.name)
