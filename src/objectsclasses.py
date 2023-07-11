@@ -463,10 +463,90 @@ hydrogen = Element('Hydrogen', 'H', 1)
 print(hydrogen)
 print(" ")
 
-#Создайте словарь со следующими ключами и значениями: 'name': 'Hydrogen',
-#'symbol': 'H', 'number': 1. Далее создайте объект с именем hydrogen класса
-#Element с помощью этого словаря.
-
+# Создайте словарь со следующими ключами и значениями: 'name': 'Hydrogen',
+# 'symbol': 'H', 'number': 1. Далее создайте объект с именем hydrogen класса
+# Element с помощью этого словаря.
 e1_dict = {'name':'Hydrogen', 'symbol':'H', 'number':1}
 hydrogen = Element(e1_dict['name'], e1_dict['symbol'], e1_dict['number']) 
 print(hydrogen.name)
+print (" ")
+
+# Для класса Element определите метод с именем dump(), который выводит на
+# экран значения атрибутов объекта (name, symbol и number). Создайте объект
+# hydrogen из этого нового определения и используйте метод dump(), чтобы вы-
+# вести на экран его атрибуты.
+
+
+# Вызовите функцию print(hydrogen). В определении класса Element измените
+# имя метода dump на __str__, создайте новый объект hydrogen и затем снова вы-
+# зовите метод print(hydrogen).
+
+
+# Модифицируйте класс Element, сделав атрибуты name, symbol и number приват-
+# ными. Определите свойство получателя для каждого атрибута, возвращающее
+# его значение.
+class Element:
+    def __init__(self, name, symbol, number):
+        self.__name = name
+        self.__symbol = symbol
+        self.__number = number
+@property
+def name(self):
+    return self.__name
+@property
+def symbol(self):
+    return self.__symbol
+@property
+def number(self):
+    return self.__number
+hydrogen = Element('Hydrogen','H',1)
+
+# print(hydrogen.__name)
+# print(hydrogen.__symbol)    #AttributeError: 'Element' object has no attribute '__name' # Почему?
+# print(hydrogen.__number)
+
+# Определите три класса: Bear, Rabbit и Octothorpe. Для каждого из них опре-
+# делите всего один метод — eats(). Он должен возвращать значения 'berries'
+# (для Bear), 'clover' (для Rabbit) или 'campers' (для Octothorpe). Создайте
+# по одному объекту каждого класса и выведите на экран то, что ест указанное
+# животное.
+class Bear:
+    def eats(self):
+        return 'berries'
+class Rabbit:
+    def eats(self):
+        return 'clover'
+class Octothorpe:
+    def eats(self):
+        return 'campers'
+b = Bear()
+r = Rabbit()
+o = Octothorpe()
+print(b.eats())
+print(r.eats())
+print(o.eats())
+print(" ")
+
+# Определите три класса: Laser, Claw и SmartPhone. Каждый из них имеет только
+# один метод — does(). Он возвращает значения 'disintegrate' (для Laser),
+# 'crush' (для Claw) или 'ring' (для SmartPhone). Далее определите класс Robot,
+# который содержит по одному объекту каждого из этих классов. Определите
+# метод does() для класса Robot, который выводит на экран все, что делают его
+# компоненты.
+
+class Laser:
+    def does(self):
+        return 'disintegrate'
+class Claw:
+    def does(self):
+        return 'crush'
+class SmartPhone:
+    def does(self):
+        return 'ring'
+l = Laser()
+c = Claw()
+s = SmartPhone()
+# Далее определите класс Robot,
+# который содержит по одному объекту каждого из этих классов.
+
+# И как мне это сделать я не понимаю

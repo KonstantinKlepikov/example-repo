@@ -31,7 +31,7 @@ print(plain)
 # в упражнении 11.5, и выведите его на экран. Изменился ли порядок ключей?
 from collections import OrderedDict
 fancy = OrderedDict([('a',1),('b',2),('c',3)])
-fancy
+print(fancy)
 print(" ")
 
 # Создайте defaultdict с именем dict_of_lists и передайте ему аргумент
