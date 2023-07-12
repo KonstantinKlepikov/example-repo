@@ -1,2 +1,3 @@
 *.txt2
 venv/
+__pycache__/
