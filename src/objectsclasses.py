@@ -475,35 +475,56 @@ print (" ")
 # экран значения атрибутов объекта (name, symbol и number). Создайте объект
 # hydrogen из этого нового определения и используйте метод dump(), чтобы вы-
 # вести на экран его атрибуты.
-
+class Element:
+    def __init__(self, name, symbol, number):
+        self.name = name
+        self.symbol = symbol
+        self.number = number
+    def dump(self):
+        print('name=%s, symbol=%s, number=%s' %
+              (self.name, self.symbol, self.number))
+hydrogen = Element(**e1_dict)
+hydrogen.dump()
+print(" ")
 
 # Вызовите функцию print(hydrogen). В определении класса Element измените
 # имя метода dump на __str__, создайте новый объект hydrogen и затем снова вы-
 # зовите метод print(hydrogen).
-
+print(hydrogen)
+class Element:
+    def __init__(self, name, symbol, number):
+        self.name = name
+        self.symbol = symbol
+        self.number = number
+    def __str__(self):
+        return ('name=%s, symbol=%s, number=%s' %
+                (self.name, self.symbol, self.number))
+hydrogen = Element(**e1_dict)
+print(hydrogen)
+print(" ")
 
 # Модифицируйте класс Element, сделав атрибуты name, symbol и number приват-
 # ными. Определите свойство получателя для каждого атрибута, возвращающее
 # его значение.
-class Element:
+class Element2:
     def __init__(self, name, symbol, number):
         self.__name = name
         self.__symbol = symbol
         self.__number = number
-@property
-def name(self):
-    return self.__name
-@property
-def symbol(self):
-    return self.__symbol
-@property
-def number(self):
-    return self.__number
-hydrogen = Element('Hydrogen','H',1)
-
-# print(hydrogen.__name)
-# print(hydrogen.__symbol)    #AttributeError: 'Element' object has no attribute '__name' # Почему?
-# print(hydrogen.__number)
+    @property
+    def name(self):
+     return self.__name
+    @property
+    def symbol(self):
+      return self.__symbol
+    @property
+    def number(self):
+        return self.__number
+hydrogen2 = Element2('Hydrogen', 'H', 1)
+print(hydrogen2.name)
+print(hydrogen2.symbol)
+print(hydrogen2.number)
+print(" ")
 
 # Определите три класса: Bear, Rabbit и Octothorpe. Для каждого из них опре-
 # делите всего один метод — eats(). Он должен возвращать значения 'berries'
@@ -533,7 +554,6 @@ print(" ")
 # который содержит по одному объекту каждого из этих классов. Определите
 # метод does() для класса Robot, который выводит на экран все, что делают его
 # компоненты.
-
 class Laser:
     def does(self):
         return 'disintegrate'
@@ -543,10 +563,16 @@ class Claw:
 class SmartPhone:
     def does(self):
         return 'ring'
-l = Laser()
-c = Claw()
-s = SmartPhone()
-# Далее определите класс Robot,
-# который содержит по одному объекту каждого из этих классов.
-
-# И как мне это сделать я не понимаю
+class Robot:
+    def __init__(self):
+        self.laser = Laser()
+        self.claw = Claw()
+        self.smartphone = SmartPhone()
+    def does(self):
+        return '''Laser, %s.
+        Claw, %s.
+        Smartphone, %s.''' % (self.laser.does(),
+       self.claw.does(),
+       self.smartphone.does() )
+r = Robot()
+print( r.does() )
