@@ -34,7 +34,7 @@ def commentary(color):
 comment = commentary('blue')
 print(comment)
 print(do_nothing())
-print(" ")  
+print(" ")
 
 thing = None
 if thing:
@@ -131,7 +131,7 @@ print_more('cap', 'gloves', 'scarf', 'monocle', 'mustache wax')
 print(" ")
 
 print_args(2, 5, 7, 'x')
-args = (2,5,7,'x')
+args = (2, 5, 7, 'x')
 print_args(args)
 print_args(*args)
 print(" ")
@@ -230,7 +230,7 @@ def edit_story(words, func):
     for word in words:
         print(func(word))
 stairs = ['thud', 'meow', 'thud', 'hiss']
-def enliven(word): # больше эмоций!
+def enliven(word):     # больше эмоций!
     return word.capitalize() + '!'
 edit_story(stairs, enliven)
 print(" ")
@@ -293,7 +293,6 @@ def add_ints(a, b):
     return a + b
 add_ints(3, 5)
 print(" ")
-
 @square_it
 @document_it
 def add_ints(a, b):
@@ -330,11 +329,11 @@ print(" ")
 
 animal = 'fruitbat'
 def change_local():
-    animal = 'wombat' # локальная переменная
+    animal = 'wombat'     # локальная переменная
     print('locals:', locals())
 print(animal)
 change_local()
-print('globals:', globals()) # немного переформатировано для представления
+print('globals:', globals())     # немного переформатировано для представления
 print(" ")
 
 def amazing():
@@ -351,7 +350,7 @@ def flatten(lol):
                 yield subitem
         else:
             yield item
-lol = [1, 2, [3,4,5], [6,[7,8,9], []]]
+lol = [1, 2, [3, 4, 5], [6, [7, 8, 9], []]]
 print(flatten(lol))
 print(list(flatten(lol)))
 print(" ")
@@ -404,7 +403,7 @@ print(" ")
 # числа из диапазона range(10). Используйте цикл for, чтобы найти и вывести
 # третье возвращенное значение.
 def get_odds():
-    for number in range(1,10,2):
+    for number in range(1, 10, 2):
         yield number
 count = 1
 for number in get_odds():
@@ -414,8 +413,8 @@ for number in get_odds():
     count += 1
 print(" ")
 
-#Определите декоратор test, который выводит строку 'start' при вызове функ-
-#ции и строку 'end', когда функция завершает свою работу.
+# Определите декоратор test, который выводит строку 'start' при вызове 
+# функции и строку 'end', когда функция завершает свою работу.
 def test(func):
     def new_func(*args, **kwargs):
         print('start')
@@ -429,9 +428,9 @@ def greeting():
 greeting()
 print(" ")
 
-#Определите исключение OopsException. Сгенерируйте его и посмотрите, что
-#произойдет. Затем напишите код, позволяющий поймать это исключение и вы-
-#вести строку 'Caught an oops'.
+# Определите исключение OopsException. Сгенерируйте его и посмотрите, что
+# произойдет. Затем напишите код, позволяющий поймать это исключение и 
+# вывести строку 'Caught an oops'.
 class OopsException(Exception):
     pass
 try:

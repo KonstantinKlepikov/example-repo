@@ -1,6 +1,6 @@
 # цикл for, чтобы вывести на экран значения списка [3, 2, 1, 0].
 print(" ")
-#list(range(0, 3))
+# list(range(0, 3))
 for x in range(3, -1, -1):
     print(x)
 print(" ")
@@ -17,17 +17,15 @@ number = 0
 guess_me = 8
 start_text = input('Введите число для поиска: ')
 start = int(start_text)
-while number < start < guess_me :
+while number < start < guess_me:
     start += 1
     print('too short!', start - 1)
     continue
-if start == guess_me :
+if start == guess_me:
     print('found it:', guess_me - 1)
 else:
     print('oops!')
-         
-print(" ")  
-
+print(" ")
 # print('No even number found')
 # Присвойте значение 5 переменной guess_me. Используйте цикл for для того,
 # чтобы проитерировать с помощью переменной number по диапазону range(10).
@@ -35,7 +33,7 @@ print(" ")
 # на экран сообщение 'too low'. Если оно равно значению guess_me — выведите
 # сообщение 'found it!', а затем выйдите из цикла. Если значение переменной
 # number больше, чем guess_me, выведите на экран сообщение 'oops' и выйдите
-# из цикла. 
+# из цикла.
 number = range(10)
 for guess_me in number:
     print('too short!', guess_me)

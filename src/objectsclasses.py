@@ -383,7 +383,7 @@ print(" ")
 parts = {'bill': 'wide orange', 'tail': 'long'}
 duck2 = Duck(**parts)
 print(duck2)
-duck2 = Duck(bill = 'wide orange', tail = 'long')
+duck2 = Duck(bill='wide orange', tail='long')
 duck3 = duck2._replace(tail='magnificent', bill='crushing')
 print(duck3)
 duck_dict = {'bill': 'wide orange', 'tail': 'long'}
@@ -419,7 +419,7 @@ print(duck.habitat)
 print(snowman.teeth)
 print(" ")
 
-#УПРАЖНЕНИЯ
+# УПРАЖНЕНИЯ
 
 # Создайте класс Thing, не имеющий содержимого, и выведите его на экран.
 # Затем создайте объект example этого класса и также выведите его. Совпада-
@@ -459,17 +459,17 @@ class Element:
         self.name = name
         self.symbol = symbol
         self.number = number
-hydrogen = Element('Hydrogen', 'H', 1) 
+hydrogen = Element('Hydrogen', 'H', 1)
 print(hydrogen)
 print(" ")
 
 # Создайте словарь со следующими ключами и значениями: 'name': 'Hydrogen',
 # 'symbol': 'H', 'number': 1. Далее создайте объект с именем hydrogen класса
 # Element с помощью этого словаря.
-e1_dict = {'name':'Hydrogen', 'symbol':'H', 'number':1}
-hydrogen = Element(e1_dict['name'], e1_dict['symbol'], e1_dict['number']) 
+e1_dict = {'name': 'Hydrogen', 'symbol': 'H', 'number': 1}
+hydrogen = Element(e1_dict['name'], e1_dict['symbol'], e1_dict['number'])
 print(hydrogen.name)
-print (" ")
+print(" ")
 
 # Для класса Element определите метод с именем dump(), который выводит на
 # экран значения атрибутов объекта (name, symbol и number). Создайте объект
@@ -573,6 +573,6 @@ class Robot:
         Claw, %s.
         Smartphone, %s.''' % (self.laser.does(),
        self.claw.does(),
-       self.smartphone.does() )
+       self.smartphone.does())
 r = Robot()
-print( r.does() )
+print(r.does())
