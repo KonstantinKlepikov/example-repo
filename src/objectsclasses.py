@@ -475,14 +475,19 @@ print(" ")
 # экран значения атрибутов объекта (name, symbol и number). Создайте объект
 # hydrogen из этого нового определения и используйте метод dump(), чтобы вы-
 # вести на экран его атрибуты.
+
+
 class Element:
     def __init__(self, name, symbol, number):
         self.name = name
         self.symbol = symbol
         self.number = number
+
     def dump(self):
         print('name=%s, symbol=%s, number=%s' %
               (self.name, self.symbol, self.number))
+
+
 hydrogen = Element(**e1_dict)
 hydrogen.dump()
 print(" ")
@@ -491,14 +496,19 @@ print(" ")
 # имя метода dump на __str__, создайте новый объект hydrogen и затем снова вы-
 # зовите метод print(hydrogen).
 print(hydrogen)
+
+
 class Element:
     def __init__(self, name, symbol, number):
         self.name = name
         self.symbol = symbol
         self.number = number
+
     def __str__(self):
         return ('name=%s, symbol=%s, number=%s' %
                 (self.name, self.symbol, self.number))
+
+
 hydrogen = Element(**e1_dict)
 print(hydrogen)
 print(" ")
@@ -506,20 +516,27 @@ print(" ")
 # Модифицируйте класс Element, сделав атрибуты name, symbol и number приват-
 # ными. Определите свойство получателя для каждого атрибута, возвращающее
 # его значение.
+
+
 class Element2:
     def __init__(self, name, symbol, number):
         self.__name = name
         self.__symbol = symbol
         self.__number = number
+
     @property
     def name(self):
-     return self.__name
+        return self.__name
+
     @property
     def symbol(self):
-      return self.__symbol
+        return self.__symbol
+
     @property
     def number(self):
         return self.__number
+
+
 hydrogen2 = Element2('Hydrogen', 'H', 1)
 print(hydrogen2.name)
 print(hydrogen2.symbol)
@@ -531,15 +548,23 @@ print(" ")
 # (для Bear), 'clover' (для Rabbit) или 'campers' (для Octothorpe). Создайте
 # по одному объекту каждого класса и выведите на экран то, что ест указанное
 # животное.
+
+
 class Bear:
     def eats(self):
         return 'berries'
+
+
 class Rabbit:
     def eats(self):
         return 'clover'
+
+
 class Octothorpe:
     def eats(self):
         return 'campers'
+
+
 b = Bear()
 r = Rabbit()
 o = Octothorpe()
@@ -554,25 +579,38 @@ print(" ")
 # который содержит по одному объекту каждого из этих классов. Определите
 # метод does() для класса Robot, который выводит на экран все, что делают его
 # компоненты.
+
+
 class Laser:
     def does(self):
         return 'disintegrate'
+
+
 class Claw:
     def does(self):
         return 'crush'
+
+
 class SmartPhone:
     def does(self):
         return 'ring'
+
+
 class Robot:
     def __init__(self):
         self.laser = Laser()
         self.claw = Claw()
         self.smartphone = SmartPhone()
+
     def does(self):
         return '''Laser, %s.
-        Claw, %s.
-        Smartphone, %s.''' % (self.laser.does(),
-       self.claw.does(),
-       self.smartphone.does())
+            Claw, %s.
+            Smartphone, %s.''' % (
+                self.laser.does(),
+                self.claw.does(),
+                self.smartphone.does()
+                    )
+
+
 r = Robot()
 print(r.does())
