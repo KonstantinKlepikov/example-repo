@@ -299,11 +299,10 @@ def add_ints(a, b):
     return a + b
 add_ints(3, 5)
 print(" ")
-
 animal = 'fruitbat'
 def print_global():
     print('inside print_global:', animal)
-print('at the top level:', animal)
+    print('at the top level:', animal)
 print_global()
 def change_and_print_global():
     print('inside change_and_print_global:', animal)
@@ -361,7 +360,7 @@ def flatten(lol):
             yield from flatten(item)
         else:
             yield item
-lol = [1, 2, [3,4,5], [6,[7,8,9], []]]
+lol = [1, 2, [3, 4, 5], [6, [7, 8, 9], []]]
 print(list(flatten(lol)))
 print(" ")
 
