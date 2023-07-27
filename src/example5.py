@@ -15,11 +15,11 @@ acme_customer = dict(first="Wile", middle="E", last="Coyote")
 print(acme_customer)
 print(" ")
 
-lol = [ ['a', 'b'], ['c', 'd'], ['e', 'f'] ]
+lol = [['a', 'b'], ['c', 'd'], ['e', 'f']]
 print(dict(lol))
 print(" ")
 
-lot = [ ('a', 'b'), ('c', 'd'), ('e', 'f') ]
+lot = [('a', 'b'), ('c', 'd'), ('e', 'f')]
 print(dict(lot))
 print(" ")
 
@@ -27,7 +27,7 @@ tol = (['a', 'b'], ['c', 'd'], ['e', 'f'])
 print(dict(tol))
 print(" ")
 
-los = [ 'ab', 'cd', 'ef' ]
+los = ['ab', 'cd', 'ef']
 print(dict(los))
 print(" ")
 
@@ -57,7 +57,6 @@ some_pythons = {
     'Graham': 'Chapman',
     'John': 'Cleese',
     'Eric': 'Idle',
-    'Terry': 'Gilliam',
     'Michael': 'Palin',
     'Terry': 'Jones',
 }
@@ -98,7 +97,7 @@ pythons = {
 print(pythons)
 print(" ")
 
-others = { 'Marx': 'Groucho', 'Howard': 'Moe' }
+others = {'Marx': 'Groucho', 'Howard': 'Moe'}
 pythons.update(others)
 print(pythons)
 print(" ")
@@ -129,29 +128,29 @@ print(pythons)
 print(" ")
 
 pythons = {'Chapman': 'Graham', 'Cleese': 'John',
-'Jones': 'Terry', 'Palin': 'Michael', 'Idle': 'Eric' }
+                      'Jones': 'Terry', 'Palin': 'Michael', 'Idle': 'Eric'}
 print('Chapman' in pythons)
 print('Palin' in pythons)
 print('Gilliam' in pythons)
 
 signals = {'green': 'go',
-'yellow': 'go faster',
-'red': 'smile for the camera'}
+           'yellow': 'go faster',
+           'red': 'smile for the camera'}
 save_signals = signals
 signals['blue'] = 'confuse everyone'
 print(save_signals)
 print(" ")
 
 original_signals = {'green': 'go',
-'yellow': 'go faster',
-'red': 'smile for the camera',
-'blue': 'confuse everyone'}
+                    'yellow': 'go faster',
+                    'red': 'smile for the camera',
+                    'blue': 'confuse everyone'}
 print(original_signals)
 print(" ")
 
 signals = {'green': 'go',
-'yellow': 'go faster',
-'red': ['stop', 'smile']}
+                    'yellow': 'go faster',
+                    'red': ['stop', 'smile']}
 signals_copy = signals.copy()
 print(signals)
 print(signals_copy)
@@ -164,8 +163,8 @@ print(" ")
 
 import copy
 signals = {'green': 'go',
-'yellow': 'go faster',
-'red': ['stop', 'smile']}
+           'yellow': 'go faster',
+           'red': ['stop', 'smile']}
 signals_copy = copy.deepcopy(signals)
 print(signals)
 print(signals_copy)
@@ -174,17 +173,17 @@ print(signals)
 print(signals_copy)
 print(" ")
 
-a = {1:1, 2:2, 3:3}
-b = {3:3, 1:1, 2:2}
+a = {1: 1, 2: 2, 3: 3}
+b = {3: 3, 1: 1, 2: 2}
 print(a == b)
-a = {1: [1, 2], 2: [1], 3:[1]}
-b = {1: [1, 1], 2: [1], 3:[1]}
+a = {1: [1, 2], 2: [1], 3: [1]}
+b = {1: [1, 1], 2: [1], 3: [1]}
 print(a == b)
 print(" ")
 
 accusation = {'room': 'ballroom', 'weapon': 'lead pipe',
-'person': 'Col. Mustard'}
-for card in accusation: # или for card in accusation.keys():
+              'person': 'Col. Mustard'}
+for card in accusation:   # или for card in accusation.keys():
     print(card)
 print(" ")
 
@@ -212,8 +211,8 @@ print(" ")
 
 vowels = 'aeiou'
 word = 'onomatopoeia'
-vowel_counts = {letter: word.count(letter) for letter in set(word)
-    if letter in vowels}
+vowel_counts = {letter: word.count(letter) for letter in set(word) if letter
+                in vowels}
 print(vowel_counts)
 print(" ")
 
@@ -231,13 +230,13 @@ print(set(('Ummagumma', 'Echoes', 'Atom Heart Mother')))
 print(set({'apple': 'red', 'orange': 'orange', 'cherry': 'red'}))
 print(" ")
 
-reindeer = set( ['Dasher', 'Dancer', 'Prancer', 'Mason-Dixon'] )
+reindeer = set(['Dasher', 'Dancer', 'Prancer', 'Mason-Dixon'])
 print(len(reindeer))
-s = set((1,2,3))
+s = set((1, 2, 3))
 print(s)
 s.add(4)
 print(s)
-s = set((1,2,3))
+s = set((1, 2, 3))
 s.remove(3)
 print(s)
 print(" ")
@@ -312,12 +311,12 @@ print(wruss > bruss)
 print(a > a)
 print(" ")
 
-a_set = {number for number in range(1,6) if number % 3 == 1}
+a_set = {number for number in range(1, 6) if number % 3 == 1}
 print(a_set)
 print(frozenset([3, 2, 1]))
 print(frozenset(set([2, 1, 3])))
 print(frozenset({3, 1, 2}))
-print(frozenset( (2, 3, 1) ))
+print(frozenset((2, 3, 1)))
 fs = frozenset([3, 2, 1])
 print(fs)
 print(" ")

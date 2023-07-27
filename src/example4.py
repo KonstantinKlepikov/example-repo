@@ -19,10 +19,10 @@ print("Пропускаем итерации, используя операто�
 print(" ")
 while True:
     value = input("Integer, please [q to quit]: ")
-    if value == 'q': # выход
+    if value == 'q':   # выход
         break
     number = int(value)
-    if number % 2 == 0: # нечетное число
+    if number % 2 == 0:   # нечетное число
         continue
     print(number, "squared is", number*number)
     print(" ")
@@ -38,7 +38,7 @@ while position < len(numbers):
         print('Found even number', number)
         break
     position += 1
-else: # break не вызываем
+else:   # break не вызываем
     print('No even number found')
 
 print(" ")
@@ -75,7 +75,7 @@ else:
 print(" ")
 print("Генерируем числовые последовательности с помощью функции range()")
 print(" ")
-for x in range(0,3):
+for x in range(0, 3):
     print(x)
 print(" ")
 list(range(0, 3))

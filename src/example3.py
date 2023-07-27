@@ -15,9 +15,7 @@ else:
         print("It's a whale!")
     else:
         print("It's a human. Or a hairless cat.")
- 
 print(" ")
-
 color = "mauve"
 if color == "red":
     print("It's a tomato")
@@ -26,22 +24,18 @@ elif color == "green":
 elif color == "bee purple":
     print("I don't know what it is, but only bees can see it")
 else:
-    print("I've never heard of the color", color) 
-
+    print("I've never heard of the color", color)
 print(" ")
-
 x = 7
 print(bool(5 > x and x > 10))
 print(" ")
 print("Выполняем несколько сравнений с помощью оператора in")
 print(" ")
-
-
 letter = 'o'
-if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u': 
- print(letter, 'is a vowel')
+if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u':
+    print(letter, 'is a vowel')
 else:
- print(letter,'is not a vowel')
+    print(letter, 'is not a vowel')
 
 print(" ")
 vowels = 'aeiou'
@@ -49,7 +43,7 @@ letter = 'o'
 print(bool(letter in vowels))
 print(" ")
 if letter in vowels:
- print(letter, 'is a vowel')
+    print(letter, 'is a vowel')
 print(" ")
 letter = 'o'
 vowel_set = {'a', 'e', 'i', 'o', 'u'}
@@ -58,28 +52,27 @@ vowel_list = ['a', 'e', 'i', 'o', 'u']
 print(bool(letter in vowel_list))
 vowel_tuple = ('a', 'e', 'i', 'd', 'u')
 print(bool(letter in vowel_tuple))
-vowel_dict = {'a': 'apple', 'e': 'elephant','i': 'impala', 'w': 'ocelot', 'u': 'unicorn'}
+vowel_dict = {'a': 'apple', 'e': 'elephant', 'i': 'impala', 'w': 'ocelot',
+              'u': 'unicorn'}
 print(bool(letter in vowel_dict))
 print(" ")
-print("Новое: I Am the Walrus (оператор морж)") 
+print("Новое: I Am the Walrus (оператор морж)")
 print(" ")
 
 tweet_limit = 280
 tweet_string = "Blah" * 50
 diff = tweet_limit - len(tweet_string)
 if diff >= 0:
- print("A fitting tweet")
+    print("A fitting tweet")
 else:
- print("Went over by", abs(diff))
-
+    print("Went over by", abs(diff))
 print(" ")
-
 tweet_limit = 280
 tweet_string = "Blah" * 50
-if diff := tweet_limit - len(tweet_string) >= 0: # := оператор присваивания
- print("A fitting tweet")
+if diff := tweet_limit - len(tweet_string) >= 0:   # := оператор присваивания
+    print("A fitting tweet")
 else:
- print("Went over by", abs(diff))
+    print("Went over by", abs(diff))
 
 print(" ")
 print("Создаем строки с помощью кавычек")
@@ -92,7 +85,7 @@ print('''Boom!''')
 print("""Eek!""")
 print(" ")
 
-print("Создаем escape-последовательности с помощью символа \ ")
+print("Создаем escape-последовательности с помощью символа '\' ")
 print(" ")
 palindrome = 'A man,\nA plan,\nA canal:\nPanama.'
 print(palindrome)
@@ -114,7 +107,7 @@ print(" ")
 print("Объединяем строки с использованием символа + ")
 print(" ")
 print('Release the kraken! ' + 'No, wait!')
-vowels = ( 'a' "e" '''i''' 'o' """u""" )
+vowels = ('a' "e" '''i''' 'o' """u""")
 print(vowels)
 a = 'Duck.'
 b = a

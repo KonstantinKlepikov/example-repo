@@ -1,7 +1,7 @@
 # Создайте англо-французский словарь с названием e2f и выведите его на экран.
 # Вот ваши первые слова: dog/chien, cat/chat и walrus/morse.
 print(" ")
-e2f = {'dog':'chien', 'cat':'chat' , 'walrus':'morse'}
+e2f = {'dog': 'chien', 'cat': 'chat', 'walrus': 'morse'}
 print(type(e2f))
 print(e2f)
 print(" ")
@@ -31,11 +31,11 @@ print(set(e2f.keys()))
 # и 'emus'. Сделайте так, чтобы ключ 'cats' ссылался на список строк со значени-
 # ями 'Henri', 'Grumpy' и 'Lucy'. Остальные ключи должны ссылаться на пустые
 # словари.
-life_list = {"cats":["Henri", "Grumpy", "Lucky"],"octopi":{},"emus":{}}
-life = {"animals":life_list, "plants":{}, "others":{}}
-print("Ключ 1 = ",life.keys())
-print("Ключ 2 = ",life["animals"].keys())
-print("Ключ 3 = ",life["animals"]["cats"])
+life_list = {"cats": ["Henri", "Grumpy", "Lucky"], "octopi": {}, "emus": {}}
+life = {"animals": life_list, "plants": {}, "others": {}}
+print("Ключ 1 = ", life.keys())
+print("Ключ 2 = ", life["animals"].keys())
+print("Ключ 3 = ", life["animals"]["cats"])
 print(" ")
 
 # Выведите на экран высокоуровневые ключи словаря life.
@@ -66,24 +66,25 @@ for thing in ('Got %s' % number for number in range(10)):
 print(" ")
 
 # Используйте   функцию zip() , чтобы создать словарь из кортежа ключей
-# ('optimist', 'pessimist', 'troll') и кортежа значений ('The glass is half full',
+# ('optimist', 'pessimist', 'troll') и кортежа значений
+# ('The glass is half full',
 # 'The glass is half empty', 'How did you get a glass?').
-keys = ('optimist','pessimist','troll')
+keys = ('optimist', 'pessimist', 'troll')
 values = ('The glass is half full',
-   'The glass is half empty',
-    'How did you get a glass?')
-print(dict(zip(keys,values)))
+          'The glass is half empty',
+          'How did you get a glass?')
+print(dict(zip(keys, values)))
 print(" ")
 
 # Используйте функцию zip(), чтобы создать словарь с именем movies, в котором
 # объединены списки titles = ['Creature of Habit', 'Crewel Fate', 'Sharks On
-# a Plane'] и plots = ['A nun turns into a monster', 'A haunted yarn shop', 'Check
-# your exits'].
+# a Plane'] и plots = ['A nun turns into a monster', 'A haunted yarn shop',
+# 'Check your exits'].
 titles = ['Creature of Habbit',
-    'Crewel Fate',
-    'Sharks On a Plane']
+          'Crewel Fate',
+          'Sharks On a Plane']
 plots = ['A nun turns into a monster',
-    'A haunted yarn shop',
-    'Check your exits']
-movies = dict(zip(titles,plots))
+         'A haunted yarn shop',
+         'Check your exits']
+movies = dict(zip(titles, plots))
 print(movies)
