@@ -115,4 +115,5 @@ print(" ")
 print("And the winner in the tournament is {} or {} ".format(duck, spitz))
 print(" ")
 # Самый новый стиль: f-строки
-print(f'among the three candidates {duck}, {pumpkin}, {spitz} in the competition for the best name wins: {spitz}')
+print(f'among the three candidates {duck}, {pumpkin}, {spitz} in the \
+      competition for the best name wins: {spitz}')
