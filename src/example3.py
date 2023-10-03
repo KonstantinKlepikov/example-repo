@@ -32,7 +32,8 @@ print(" ")
 print("Выполняем несколько сравнений с помощью оператора in")
 print(" ")
 letter = 'o'
-if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u':
+if letter == 'a' or letter == 'e' or letter == 'i' \
+                 or letter == 'o' or letter == 'u':
     print(letter, 'is a vowel')
 else:
     print(letter, 'is not a vowel')
